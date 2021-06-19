@@ -1,3 +1,3 @@
 mono:
-	gcc -O3 -Wall -Wextra -DED25519_CUSTOMHASH -DED25519_TEST -DED25519_NO_INLINE_ASM -DED25519_FORCE_32BIT -lsodium *.c
+	gcc -O3 -Wall -Wextra *.c
 	./a.out
