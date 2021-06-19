@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 #include "monocypher-ed25519.h"
-#include "utils.h"
 #include "edsign.h"
 
 typedef uint8_t u8;
@@ -28,7 +27,7 @@ int main(void) {
 	ARRAY(msg2, 64);
 	ARRAY(pk2, 32);
 
-	for(size_t i = 0; i < 1000000000; i++) {
+	for(size_t i = 0; i < 1000; i++) {
 		crypto_ed25519_sign(hash, hash, 0, hash, 64);
 
 		edsign_sec_to_pub(pk2, hash2);
