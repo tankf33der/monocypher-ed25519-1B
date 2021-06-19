@@ -21,7 +21,7 @@ void print_vector(const u8 *buf, size_t size)
 int main(void) {
     ARRAY(hash, 64);
 
-	for(size_t i = 0; i < 100000; i++) {
+	for(size_t i = 0; i < 1000000000; i++) {
 		crypto_ed25519_sign(hash, hash, 0, hash, 64);
 	}
 	print_vector(hash, 64);
